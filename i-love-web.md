@@ -17,10 +17,8 @@
   <li> Opzetten van de Github repo en het maken van een team-canvas. </li> <a href='https://github.com/users/rutgerkock/projects/7/views/1?pane=issue&itemId=78310746'>Zie issue</a>
   <br>
   Donderdag
-  <li> Ik heb vandaag gewerkt aan een animatie/loading state die we willen gebruiken voor de squad page, maar ik ook zelf wil gebruiken. </li> <a href='[https://github.com/rutgerkock/your-tribe-for-life-squad-page/issues/1](https://github.com/users/rutgerkock/projects/7?pane=issue&itemId=78311249](https://github.com/fdnd-task/your-tribe-for-life-profile-card/commit/8c64582d2b32e64710412be7ff628fc1267759f8)'>Zie commit</a>
+  <li> Ik heb vandaag gewerkt aan een animatie/loading state die we willen gebruiken voor de squad page, maar ik ook zelf wil gebruiken. </li> <a href='https://github.com/users/rutgerkock/projects/7?pane=issue&itemId=78311249](https://github.com/fdnd-task/your-tribe-for-life-profile-card/commit/8c64582d2b32e64710412be7ff628fc1267759f8)'>Zie commit</a>
 </ul>
-
-<a href='[https://github.com/rutgerkock/your-tribe-for-life-squad-page/issues/1](https://github.com/users/rutgerkock/projects/7?pane=issue&itemId=78311249](https://github.com/fdnd-task/your-tribe-for-life-profile-card/commit/8c64582d2b32e64710412be7ff628fc1267759f8)'>Zie commit</a>
 
 <b>Week 2</b>
 
