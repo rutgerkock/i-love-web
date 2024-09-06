@@ -17,8 +17,7 @@
   href='https://github.com/rutgerkock/your-tribe-for-life-squad-page/issues/1](https://github.com/users/rutgerkock/projects/7?pane=issue&itemId=78311249'>Zie issue</a>
   <li> Opzetten van de Github repo en het maken van een team-canvas. </li> <a href='https://github.com/users/rutgerkock/projects/7/views/1?pane=issue&itemId=78310746'>Zie issue</a>
   <li>
-    <b>notes</b>
-    <br>
+<b>notes</b> <br>
 > Client side rendering uitzetten:
 > Export let car = false
 > (+ page.js in de root van de route folder) 
