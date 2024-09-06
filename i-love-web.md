@@ -31,6 +31,9 @@
   <a href='https://github.com/RickFDND/your-tribe-profile-card/issues/6'>Issue 2</a>
   <a href='https://github.com/RickFDND/your-tribe-profile-card/issues/7'>Issue 3</a>
   </li>
+  <li>
+    Issue ingeschoten als feedback voor de squad page van een andere groep. <a href='https://github.com/DamianR2004/your-tribe-for-life-squad-page/issues/19'>Zie issue</a>
+  </li>
 </ul>
 
 <b>Week 2</b>
