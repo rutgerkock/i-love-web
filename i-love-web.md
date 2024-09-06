@@ -23,7 +23,7 @@
   for-life-profile-card/commit/8c64582d2b32e64710412be7ff628fc1267759f8'>Zie commit</a>
   <li> Ik heb een design gemaakt in Figma voor mijn visitekaartje.</li>
   <br>
-  <b>Vrijdah</b>
+  <b>Vrijdag</b>
   <li> Ik heb deze ochtend voor m'n eigen profile-card een loading animation gemaakt. </li> <a href='https://github.com/rutgerkock/your-tribe-for-life-profile-card/commit/40ab1d1367e0e61907de709e8a4ff8e77d426ef2'>Zie commit</a>
 </ul>
 
