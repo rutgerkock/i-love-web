@@ -18,63 +18,62 @@
   <li> Opzetten van de Github repo en het maken van een team-canvas. </li> <a href='https://github.com/users/rutgerkock/projects/7/views/1?pane=issue&itemId=78310746'>Zie issue</a>
   <li>
     <b>notes</b>
-    Client side rendering uitzetten:
-Export let car = false
-(+ page.js in de root van de route folder) 
+>     Client side rendering uitzetten:
+> Export let car = false
+> (+ page.js in de root van de route folder) 
 
 
-Mapjes svelte uitleg:
-Static is public map (client side) 
-- CSS >  global.css
+> Mapjes svelte uitleg:
+> Static is public map (client side) 
+> - CSS >  global.css
 
-*SRC map meest belangrijkst > daar gebeurd het meeste in 
-
-
-Handig om te weten
-<body data-sveltekit-preload-data=“hover”>
-      %Sveltekit.body%
-</body>
-
-> gebruikservaring is beter en lazy loading staat aan
-
-Routes > daar staan alle pagina’s
-Lib > shorthand voor library, daar staan de componenten in, voor hergebruik van componenten.
-
-+page.svelte -> lijkt op ejs -> hier combineer je data met html
-In dit +page.svelte bestand krijg je html + css + js
-
-Npm run dev (server starten)
-
-Css definiëren per pagina
+> *SRC map meest belangrijkst > daar gebeurd het meeste in 
 
 
-Data ophalen:
-Export let data (in je +page.svelte) (haalt data op)
+> Handig om te weten
+> <body data-sveltekit-preload-data=“hover”>
+>       %Sveltekit.body%
+> </body>
 
-+page.server.js -> fetchjson -> functie load -> await -> return { persons: persons}
+> > gebruikservaring is beter en lazy loading staat aan
 
-In je routes mapje bijv. [id] -> page.server.js + page.svelte -> filters zoals persons/id
+> Routes > daar staan alle pagina’s
+> Lib > shorthand voor library, daar staan de componenten in, voor hergebruik van componenten.
 
-Routes aanmaken defineren
-Als je een map aanmaakt in het mapje routes met een page bestand maakt ie een route
-In je page.server.js kan je data sturen naar deze page bestanden
+> +page.svelte -> lijkt op ejs -> hier combineer je data met html
+> In dit +page.svelte bestand krijg je html + css + js
+
+> Npm run dev (server starten)
+
+> Css definiëren per pagina
 
 
-Svelte installatie
-* npm create svelte@latest
-* Welcome to SvelteKit!
-* │
-* ◇  Where should we create your project?
-* │    (hit Enter to use current directory)
-* ◇  Directory not empty. Continue?
-* │  Yes
-* ◇  Which Svelte app template?
-* │  Skeleton project
-* ◇  Add type checking with TypeScript?
-* │  No
-* ◇  Select additional options (use arrow keys/space bar)
-* │  none
-* └  Your project is ready!
+> Data ophalen:
+> Export let data (in je +page.svelte) (haalt data op)
+
+> +page.server.js -> fetchjson -> functie load -> await -> return { persons: persons}
+
+> In je routes mapje bijv. [id] -> page.server.js + page.svelte -> filters zoals persons/id
+
+> Routes aanmaken defineren
+> Als je een map aanmaakt in het mapje routes met een page bestand maakt ie een route
+> In je page.server.js kan je data sturen naar deze page bestanden
+
+
+> Svelte installatie
+> * npm create svelte@latest
+> * Welcome to SvelteKit!
+> * │
+> * ◇  Where should we create your project?
+> * │    (hit Enter to use current directory)
+> * ◇  Directory not empty. Continue?
+> * │  Yes
+> * ◇  Which Svelte app template?
+> * │  Skeleton project
+> * ◇  Add type checking with TypeScript?
+> * ◇  Select additional options (use arrow keys/space bar)
+> * │  none
+> * └  Your project is ready!
 
   </li>
   <br>
