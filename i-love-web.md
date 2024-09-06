@@ -19,7 +19,7 @@
   <li>
     <b>notes</b>
     <br>
->     Client side rendering uitzetten:
+> Client side rendering uitzetten:
 > Export let car = false
 > (+ page.js in de root van de route folder) 
 
