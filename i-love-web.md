@@ -21,6 +21,7 @@
   <b>Donderdag</b>
   <li> Ik heb vandaag gewerkt aan een animatie/loading state die we willen gebruiken voor de squad page, maar ik ook zelf wil gebruiken. </li> <a href='https://github.com/rutgerkock/your-tribe- 
   for-life-profile-card/commit/8c64582d2b32e64710412be7ff628fc1267759f8'>Zie commit</a>
+  <li> Ik heb een design gemaakt in Figma voor mijn visitekaartje.</li>
 </ul>
 
 <b>Week 2</b>
