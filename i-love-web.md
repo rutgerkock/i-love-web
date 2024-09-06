@@ -25,7 +25,7 @@
   <br>
   <b>Vrijdag</b>
   <li> Ik heb deze ochtend voor m'n eigen profile-card een loading animation gemaakt. </li> <a href='https://github.com/rutgerkock/your-tribe-for-life-profile-card/commit/40ab1d1367e0e61907de709e8a4ff8e77d426ef2'>Zie commit</a>
-  <li>Later deze ochtend heb ik vervoor gezorgd dat de basis van mijn eigen profile-card voldoet aan contrast eisen en een prettige dark mode heeft.</li>
+  <li>Later deze ochtend heb ik ervoor gezorgd dat de basis van mijn eigen profile-card voldoet aan contrast eisen en een prettige dark mode heeft.</li>
   <li>Eerstejaars voorzien van feedback. Ik heb aan halfuur met Rick gezeten en hem veel feedback gegeven. Hier wat issues die ik heb ingeschoten over code.
   <a href='https://github.com/RickFDND/your-tribe-profile-card/issues/5'>Issue 1</a>
   <a href='https://github.com/RickFDND/your-tribe-profile-card/issues/6'>Issue 2</a>
