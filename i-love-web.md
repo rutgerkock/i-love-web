@@ -7,7 +7,7 @@ Hierin documenteer ik alle we <3 Web's die ik heb gevolgd :).
 > Toegankelijkheid, creativiteit en klokken
 
 #### 📅 Vrijdag 13 sept
-> 👩‍🎓 Wat ik heb geleerd: Dat je zo vrij kunt zijn in het maken van websites, het kan zo gek niet zijn en je kunt het maken. Lekker experimenteren met nieuwe technologiën of als je iets leuk vind.
+
 
 ### Achtergrond
 - Opgeleid als kunstenaar
@@ -63,7 +63,6 @@ Hierin documenteer ik alle we <3 Web's die ik heb gevolgd :).
 > Creative developer, started developing 2012
 
 #### 📅 Vrijdag 04 oktober 
-> 👩‍🎓 Wat ik heb geleerd: Hoe animaties je website/ interacties kunnen verbeteren en dat je daarbij wel rekening moet houden voor toegankelijkheid
 
 ### Wat is een Creative Developer?
 - Fancy term for dev with an eye for creativity
@@ -145,7 +144,6 @@ WePresent x Olafur - Coming soon - with WeTransfer
 > Creative Developer én docent FDND, over zijn portfolio [dionpieters.dev](dionpieters.dev)
 
 #### 📅 Vrijdag 18 oktober
-> 👩‍🎓 Wat ik heb geleerd: Welke vragen je aan je zelf kunt stellen om het maken van een portfolio gemakkelijker te maken. 
 
 - CMD gestudeerd NERD
 - Afstudeer Stage bij built in Amsterdam (e-commerce)
