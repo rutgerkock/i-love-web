@@ -1,8 +1,3 @@
-# We ❤️ Web's
-Hierin documenteer ik alle we <3 Web's die ik heb gevolgd :).
-
-***
-
 ## We ❤️ Web met Vasilis van Gemert
 > Toegankelijkheid, creativiteit en klokken
 
