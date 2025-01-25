@@ -1,0 +1,369 @@
+# Performance.now() 
+
+## Tammy Everts (performance mom) - The Web Performance Landscape in 2024
+- WPO stats
+    - Web performance case studies
+    - Speed influences your business a lot
+    - speedcurve.com/web-performance-guide/
+    - speedcurve.com/benchmarks 
+- Dunning-kruger effect
+    - Cognitive bias in which people with limited competence in a particular domain overestimate their abilities …
+    - ￼
+    - We don’t know what we don’t know
+- 2007 -> 2024
+    - Huge improvement 
+    - Still a lot of unknown (users, browsers, devices, enz)
+- 71.1% of web users use android devices
+    - Most developers make their site apple-first while there are more android users
+        - iPhones = inequality
+- The biggest part of the worlds population has a internet speed of <= 50mb/s
+- speedcurve.com/web-performance-guide/get-started-with-core-web-vitals/
+- speedcurve.com/web-performance-guide/glossary-of-web-performance/
+    - 66% of the world uses chrome
+    - 18% safari
+- speedcurve.com/blog/INP-user-experience-correlation
+- Page-growth
+    - 2022 -> 2087.2kb
+    - 2024 -> 2687.4kb
+    - Mostly due to videos and javascript
+- speedcurve.com/blog/15-neglected-page-speed-optimizations
+    - 19/20 inefficient cache policy
+    - 17/20 unused js
+    - 14/20 lack of height and width
+    -  2 sites lazy loaded their lcp image
+- Perfomance and accessibility should overlap
+    - 96.3 had wcag failures
+- ABA -> Ask About Anything
+    - Who am I building for?
+    - Who am I testing for?
+    - Do I know what’s on my pages - and its impact?
+    - Am I doing the right optimisations?
+    - Am I tracking the right metrics?
+    - …
+    - …
+
+
+## Harry Roberts (The best performance consultant) - Site-Speed That Stick
+- Metrics
+    - Not all metrics are born equal!
+        - Different metrics
+        - For different people
+        - On different occasions
+        - With different levels of disclosure
+    - Different people should focus on different metrics
+    - Kpis, enablers, predictors
+        - Kpis (Understood by everyone, the metric where we measure success)
+            - Definition + target
+            - What are we working to?
+            - Of interest to the business
+            - Core web vitals 
+        - Enablers
+            - Metrics that influence kpis
+            - Of interest to engineering teams
+            - ttfb (time to first byte), input delay
+        - Predictors
+            - Signals of good/bad performance
+            - Highly quantitative
+            - Of interest to engineers
+            - Bundle size, long tasks, blocking css
+            - Great for root-causing and reverse engineering
+- Localhost
+    - Not a good place to test performance, big difference between live and localhost
+    - Localhost is:
+        - Seldom live-like
+        - Pretty dang fast
+        - Un-bundled
+    - Know your tooling inside out
+        - Chrome performance -> live performance panel -> throttling
+        - Experiment with custom throttling  -> get close to a realistic experience
+        - Delay your development experience to get a realistic experience
+            - Slow file
+            - Delay when you are optimising different things
+    - Bare-metal-metrics (things for yourself to test)
+        - When working on a specific test, just measure that. Measure css, look at css not other things.
+        - Private metrics
+- Backstops
+    - Backstops and budgets are very closely related
+    - What is the worst possible performance we will accept? 
+        - Thats the budget, the worst possible moment
+        - The aspiration complexer
+    - Synthetic testing;
+    - Real user monitoring
+    - When to fail a release
+    - Predictors as tripwires
+    - Budgets are backstops
+- Monitoring
+    - The m in rum stand for monitoring. There is no M in synthetic, don’t monitor in synthetic testing.
+    - Use rum monitoring for sites that change outside of deployments (User content, CMS)
+    - Only alert on your kpis -> something business facing
+    - Every 100ms on the backend is + 100ms on the frontend
+    - Lcp huge because the home-page was being rendered on the client side
+    - Server site rendering made the lcp quicker but the ttfb went up
+    - —> Fix ttbf —> quicker
+    - Always follow the numbers, never alert when its no kpi
+- Playbook
+    - There is no point mopping when the tap is open —> contain!
+    - The plan —> response = severity/duration
+    - Early triage
+        - Who, what, when, where and why?
+        - This helps democratise the triage process
+        - What has regressed? (Ttfb, lcp, enz)
+        - When did it start? Is it still like that?
+        - Where? Is it a business-critical part of the site?
+        - Who owns the problem?
+        - Why? ….
+- Key takeaways
+    - Increase confidence
+    - Use the right tool for the job
+    - Have a plan of attack
+    - Agree; commit
+
+- Questions
+    - Setup actual monitoring rum and work back. Start with rum, get data, work from there. Make sure your synthetic results mimic actual live conditions. Synthetic is good for reverse engineering. Synthetic as monitoring tool isn’t good.
+
+## Eric - Github
+- Performance -> The manner in which a mechanism behaves. 
+- How do you describe an interface?
+    - The accessibility tree
+    - Name (Short identifier)  role (How to interact with the object), properties, description
+- OS alert dialog 
+    - Menubar 
+        - Title
+        - Close button
+    - Body 
+        - Title
+        - Text
+        - Save button
+        - Cancel button
+- Html, js and css -> dom tree -> visually rendered -> user
+    - Dit gaat alle kanten en hier zit de accessibility tree ook in
+- There are multiple trees
+    - Microsoft
+    - macOS
+    - Linux
+- The dom can be part of the accessibility tree but its larger than the dom. 
+- A large amount of information in the dom means a lot for the accessibility tree to process —> slows things down
+- Write semantic html!! 
+- Optimal dom tree
+    - Max depth of 32 nodes
+    - …
+    - …
+- https://overlayfactsheet.com/en/#what-is-a-web-accessibility-overlay
+- Screenreaders -> JAWS, NVDA, VoiceOver, Talkback
+    - JAWS and Voiceover have closed source code.
+- Pruning trees! Keep js light and the dom trees on our site.
+- What is a slow machine? 
+    - People that rely on assistive technology are reluctant to upgrading/have less options
+    - Fast things can be slow because there are a lot more things that need computational power
+- Be pragmatic, the stakes are high
+- Be patient, things move slow
+- If you do one thing, test!
+- Mac = command f5 -> tab (shift+tab moves back) -> did it crash? No (amazing) / yes (Simplify your experience)
+- https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html 
+- https://designintech.report/wp-content/uploads/2019/01/dit2018as_pdf.pdf 
+- Key points
+    - Make it fast
+    - Make it accessible
+    - Make is easy to use
+    - Make its value apparent
+    - Ask people what they think
+- Github.com/googlechrome/lighthouse/issues/11049 
+- You need to figure out how to motivate people to make websites accessible
+    - Laws / ethics / speed
+
+## Paul Calvano - Performance mistakes
+- 17 common mistakes —> don’t get upset when you make mistakes
+- https://httparchive.org/ 
+- https://almanac.httparchive.org/nl/2024/
+- Native Image Lazy Loading
+    - Lazy Loading LCP (don’t!)
+    - Lazy loading high priority images (don’t!)
+- preconnect / dns prefetch 
+    - Use preconnect for a domain used on the same page
+    - If the domain is needed early in the page preconnect should appear earlier
+- 9.2 million preconnects -> 4.6 million missing crossorigin
+    - Crossorigin in preconnect (denk eraan(
+- 2.4 million sites using preload 
+    - 140.000 preloading multiple images (don’t!)
+    - 50.000 preload >1mb of content (don’t!)
+    - 35.000 preload >20 requests  (don’t!)
+    - 1160 preload video (don’t!)
+- 1.2 million sites with unused preloads (don’t do that!)
+- Think about the ‘as’ when preloading something
+- Preloading versions of the same font (Don’t!)
+- Font display swap / preload —> not both
+- Compression
+    - Content-encoding: [gzip | br | zstd] 
+    - Brotli smaller then gzip
+    - In 2024 everything supports gzip compression
+- https://tools.paulcalvano.com/compression-tester/ 
+- Check je gzip-comp-level als je NGINX gebruikt
+- inadequate compression levels (Don’t!)
+- Don’t bypass automated image optimisations 
+- Don’t use S3 for images
+- Don’t gzip first party images
+
+
+## Anna Migas (Luid UI Developer at field intelligence, google developer export) —> Thinking Beyond Core Web Vitals
+- Web performance optimisations for harsh conditions
+- Most web performance metrics and resources are developed with a privileged user in mind. 
+    - What is a good TTI score? 5 seconds —> on average mobile hardware 
+- For some users, the good web performance is not achievable at all. 
+    - Networking (latency)
+    - End-user Device compute
+- Most people in Nigeria has skipped the desktop/laptop adoption so almost everything is on mobile internet with inexpensive smartphones. —> lower power, slow connection
+- Secret web performance metric —> patience
+    - How long are you willing to wait before you call the website broken?
+- Everything is slow, what can we do?
+    - Visibility of system status —> make sure to give user information as fast as possible
+        - What’s going on
+        - How long it can take (Only of you have actual information)
+        - Once error occurs (And what can be done)
+        - Example —> google maps offline 
+    - Take into account digital literacy
+        - Use simple language
+        - Discourage damaging actions (Like reloading when things don’t load quickly)
+    - Leverage progressive enhancement
+        - Make it possible to achieve the most crucial action first, add extra features and fireworks on top of that
+    - Avoid request chaining and roundtrips
+        - Preconnect
+        - Prefetch 
+        - Preload
+    - Cache
+        - Serve static resources with a long time to load (TTL) to avoid redownloading
+        - Test for back/forward cache
+            - Google devtools -> application -> cache -> back/forward cache
+    - Optimise images and videos you ship
+        - The heaviest resources on the web
+        - Use correct and modern formats
+        - Use tools to optimise size 
+        - Add size/aspect ratio to avoid layout shifts
+    - Lazy load resources that are not critical
+    - Learn about network client hints
+        - Network information API helps web applications to access information about the users network and device (https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API) 
+    - Limit third party resources
+    - Consider using servicer worker (if you expect your page to …..)
+        - https://web.dev/case-studies/jumia
+    - Avoid creating too many layers
+        - Each layer created by the browser takes device resources. Same goes for DOM size. Consider using virtualisation for huge amounts of items.
+        - Devtools —> more tools —> layers
+    - Break long taks
+        - Slow running scripts are bad on lower powered devices, implement strategies to break up long taks.
+- Summary
+    - Let user know what is going on
+    - Load initial information early
+    - Progressively enhance your website
+    - Enz enz
+    - Enz
+    - Have empathy for the user its situation, use real user data
+
+
+## Jason Grimsby - Third Party Woes (https://bit.ly/thirdpartywoes)
+- Images are difficult —> but easy to fix
+- Third party scripts —> are much more complex
+    - Third party scripts are js files provided by websites or services to maintain the site
+Ik heb genoeg getypt, slides staan in de link
+
+
+## Alex Russel - Reckoning: Frontend's Lost Decade
+- The web is unique
+    - Safe
+    - Fresh
+    - Frictionless
+    - Interoperable
+    - User-mediated
+- You should want the web to win
+- How the desktop was won 
+    - Predicates
+        - An open internet
+        - Open-ish client OSes
+        - Legal environments that value competition
+    - It has to feel good (*enough)
+- Platforms are competitions
+    - And the web is losing
+    - 75% of the new devices with browsers are phones
+    - The mobile web has outgrown the desktop web
+
+
+Tim Kadlec - in the blink of an eye
+- 100ms = +1% revenue (And in reverse, 100ms slower, -1% revenue)
+- People can process an image in 13ms.
+- Jevons paradox
+    - The more we have of a resource, the more we consume (Originated from coal, now its everywhere (cars, web, enz…)
+    - “…waste of time to focus on performance ….  Because …users on 3G don’t buy anything” —> Maybe because the experience is terrible :D.
+- Hedonistic treadmill
+    - As resources become more powerful, our expectations increase, diminishing our satisfaction
+    - Expectations are learned through experience
+    - Core web vitals are a better starting point than a finish line
+    - Fetchpriority!! / loading lazy!! / eagerness moderate on href / view-transtion: navigation : auto ( @view-transition { “navigation”: “auto” )
+    - Betting on the browser is our best chance at long-term success
+
+Jack Franklin (Engineer for the google devtools performance tab) - devtools deep dive
+- Performance tab field data and environment settings
+- While working locally you can map the field data to your live URL
+- Network blocking (more tools)
+
+Mandy Micheal - Font Perf strategies —> getting fonts just right
+- Fonts mostly impact LCP and CLS 
+- https://almanac.httparchive.org/en/2024/fonts 
+- Third party vs self-host
+    - Browsers no longer cache resources across top level sites (Due to security reasons)
+    - Self host your fonts! (as long as you make use of other font performance strategies)
+- Reduce the number of fonts (Only load the fonts you need)
+- Variable fonts are smaller than singel and combined fonts (Sometimes)
+- TTF is 75% larger than WOFF2 (An example, but use WOFF2)
+- USE WOFF2 get rid of anything else (use system fonts as a fallback)
+- If using your only using a specific weight, only load the specific weight 
+- Worth checking if there is a new version of your font that is smaller in file size
+- Wakamaifondue.com
+- github.com/source-foundry/slice —> remove things you don’t need in variable fonts
+- Css overview —> font usage 
+- Subsetting —> subsetting.xyz —> https://github.com/zachleat/glyphhanger —> big reduction
+- https://tools.paulcalvano.com/wpt-font-analysis/ 
+- Https://www.w3.org/TR/IFT —> not available yet, would eliminate subsetting
+- Displaying fonts
+    - Invisible // visible
+    - Font-display -> swap/optional/fallback/block (swap most popular) 
+        - optional: Best for performance is optional, if it doesn’t load in 100ms it doesn’t load the font, but puts it in the cache so its there the next time, also no layout shift
+            - swap: good but CLS is a problem
+    - Font size adjust / size adjust 
+        - Size adjust —> https://textlab.dev/tools/css-size-adjust-tester / https://www.industrialempathy.com/perfect-ish-font-fallback (@font-face)
+        - Font size adjust —> adjusts the font size to keep the aspect value across fonts consistent clagnut.com/sandbox/font-size-adjust-ex.html  
+        - Be careful of relative units (CH/VW/enz…) you will get CLS
+- Font loading
+    - Cache your fonts
+        - Cache control = public, max-age=31500000
+    - Fonts are only downloaded if its referenced by styling on the page
+    - Inline font css —> include @font-face and a font-family rule for the page. (Be careful using this)
+    - Tell browsers to load essential resources (f.e. fonts) before they’re needed 
+        - preconnect
+        - Preloading —> ensure fonts are discoverable early but takes browser resources away from loading other resources (Only preload woff2)
+        - <link
+            - rel=“preload”
+            - as=“font”
+            - Type=“font/woff2”
+            - …
+        - Remember crossorigin!!
+        - Don’t preload font-display optional
+        - Don’t just preload/preconnnect all fonts, consider fonts against other assets
+- Self host as few (probably) variable, woff2 fonts as possible that have been sliced (if they’re variable fonts), subset …….
+- Or use system fonts
+- Https://bit.ly/mandys-font-perf-resources 
+
+
+Erwin Hofman & Karlijn Lowik - INP Case Studies
+- Core web vitals versus lighthouse
+    - field data versus lab data
+- INP > FID
+- Rumvision.com/perf-slides 
+
+
+Daniel Roe - Unpacking bundling
+- Full time open sourcerer
+- Nuxt, Nitro, page-speed.dev, regexp.dev, fontaine.sh, elk.zone, enz…
+- Frameworks exist because there is a need 
+- Don’t use google tag manager —> https://scripts.nuxt.com/ 
+
+Annie Sullivan - Aiming for the Stars
+- Chrome user experience report
+- Low end device/devtools throttling
